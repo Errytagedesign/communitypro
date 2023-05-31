@@ -1,0 +1,34 @@
+/* ====== GLOBAL STYLE START==== */
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 375px;
+  padding: 0;
+  margin: 0;
+  font-family: "Crete Round", serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* ====== GLOBAL STYLE END==== */
+
+/* ====== GLOBAL VARIABLES START==== */
+
+:root {
+  --primary-color: #ff6b00;
+  --black: #1c1a19;
+  --white: #ffffff;
+  --light-yellow: #fff5e1;
+  --light-grey: #dbd8d7;
+}
+/* ====== GLOBAL VARIABLES END==== */
+.title {
+  color: green;
+}
