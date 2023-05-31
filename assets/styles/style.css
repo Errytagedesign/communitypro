@@ -8,13 +8,15 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   min-width: 375px;
   padding: 0;
   margin: 0;
-  font-family: "Crete Round", serif;
+  font-family: "Roboto", "Crete Round", "Poppins", serif;
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
+  color: var(--white);
 }
 
 /* ====== GLOBAL STYLE END==== */
@@ -29,6 +31,21 @@ html {
   --light-grey: #dbd8d7;
 }
 /* ====== GLOBAL VARIABLES END==== */
-.title {
-  color: green;
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #3c3a39;
+  padding: 1.5em 1em;
+}
+
+header .my-logo {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+header .nav-icon:hover {
+  transform: scale(1.3);
 }
