@@ -1,4 +1,4 @@
-/* ====== GLOBAL STYLE START==== */
+/* ====== GLOBAL STYLE START ==== */
 
 *,
 *::after,
@@ -12,7 +12,7 @@ body {
   min-width: 375px;
   padding: 0;
   margin: 0;
-  font-family: "Roboto", "Crete Round", "Poppins", serif;
+  font-family: "Roboto", "Crete Round", "Poppins", "Helvetica", "Arial", "Verdana", "Tahoma", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -35,18 +35,19 @@ small {
   transform: scale(1.3);
 }
 
-/* ====== GLOBAL STYLE END==== */
+/* ====== GLOBAL STYLE END ==== */
 
-/* ====== GLOBAL VARIABLES START==== */
+/* ====== GLOBAL VARIABLES START ==== */
 
 :root {
   --primary-color: #ff6b00;
   --black: #1c1a19;
-  --white: #ffffff;
+  --white: #fff;
   --light-yellow: #fff5e1;
   --light-grey: #dbd8d7;
 }
-/* ====== GLOBAL VARIABLES END==== */
+
+/* ====== GLOBAL VARIABLES END ==== */
 
 /* ====== HEADER START ==== */
 
@@ -69,7 +70,8 @@ header .my-logo {
 /* ====== HERO SECTION START ==== */
 
 .hero {
-  background: var(--black) url("../images/background.svg") no-repeat bottom
+  background: 
+    var(--black) url("../images/background.svg") no-repeat bottom
     right;
   padding: 11em 2em;
 }
@@ -91,6 +93,7 @@ header .my-logo {
 .hero p {
   font-family: "Poppins";
 }
+
 .hero .icons {
   margin: 1.3em 0;
   display: flex;
@@ -99,4 +102,5 @@ header .my-logo {
   align-items: center;
   width: 60%;
 }
+
 /* ====== HERO SECTION END ==== */
