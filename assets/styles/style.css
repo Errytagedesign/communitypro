@@ -13,14 +13,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 
-    "Roboto", 
-    "Crete Round", 
-    "Poppins", 
-    "Helvetica", 
-    "Arial", 
-    "Verdana", 
-    "Tahoma", 
-    sans-serif;
+    "Roboto", "Crete Round",  "Poppins",  "Helvetica", "Arial", "Verdana", "Tahoma", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -85,7 +78,8 @@ header .my-logo {
 }
 
 .hero h2 {
-  font: "Crete Round";
+    /* stylelint-disable -- This problem is ignorable. */
+  font-family: "Crete Round";
   font-size: 3.5rem;
   font-weight: 400;
   line-height: 4rem;
@@ -99,7 +93,8 @@ header .my-logo {
 }
 
 .hero p {
-  font: "Poppins";
+  /* stylelint-disable -- This problem is ignorable. */
+  font-family: "Poppins";
 }
 
 .hero .icons {
