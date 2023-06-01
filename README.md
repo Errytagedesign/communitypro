@@ -31,7 +31,7 @@
 
 # 📖 Hello Microverse Project <a name="about-project"></a>
 
-This is my First Microverse Project. I created it using HTML and CSS. In addition, i added Linters for Html and Css.
+A Microverse Perosnal Portfolio Project developed with duo of HTML and CSS. In addition, i added Linters for Html and Css.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -54,6 +54,10 @@ This is my First Microverse Project. I created it using HTML and CSS. In additio
 
 - Add index.html file.
 - Add style.css file.
+- Add Linters.
+- Add Header to the index.html file.
+- Add Hero section to the index.html file.
+- Add global styling variables to style.html file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,7 +65,7 @@ This is my First Microverse Project. I created it using HTML and CSS. In additio
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<a href="https://codeeq-verse.netlify.app/">Live Demo Link</a>
+<a href="https://codeeq-microverse-portfolio.netlify.app/">Live Demo Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,7 +87,7 @@ Run this Command:
 
 ```sh
   cd my-folder
-  git clone git@github.com:GhausAliKhan/Hello-Microverse-Project.git
+  git clone git@github.com:Errytagedesign/microverse-portfolio.git
 ```
 
 ### Install
@@ -92,7 +96,7 @@ First you need to install the node package files
 Run this command:
 
 ```sh
-  cd Hello-Microverse-Project
+  cd microverse-portfolio
   npm install
 ```
 
@@ -119,7 +123,7 @@ I have added the linters or tests in order to avoid anykind of typos and ensure 
 
 ### Deployment
 
-- You can easily use github pages to deploy your project
+- You can easily use github pages, netlify or vercel to deploy your project
   <a href="https://docs.github.com/en/pages/quickstart">Useful link about Github Pages</a>
   <a href="https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/">Step by Step guide to deploy using netlify</a>
   <a href="https://www.programonaut.com/host-your-application-for-free-with-vercel-step-by-step/">Step by Step guide to deploy using vercel</a>
@@ -142,7 +146,11 @@ I have added the linters or tests in order to avoid anykind of typos and ensure 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Add Header
+- [ ] Add Recent Work
+- [ ] Add About Me
+- [ ] Add Tech Stacks
+- [ ] Add Qoutes
+- [ ] Add Contact Form
 - [ ] Add Footer
 - [ ] Add more Styling
 
