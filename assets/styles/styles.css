@@ -12,7 +12,7 @@ body {
   min-width: 375px;
   padding: 0;
   margin: 0;
-  font-family: 
+  font-family:
     "Roboto",
     "Crete Round",
     "Poppins",
@@ -78,13 +78,14 @@ header .my-logo {
 /* ====== HERO SECTION START ==== */
 
 .hero {
-  background: 
-    var(--black) url("../images/background.svg") no-repeat bottom right;
+  background:
+    var(--black) url("../images/background.svg") no-repeat bottom
+    right;
   padding: 11em 2em;
 }
 
 .hero h2 {
-    /* stylelint-disable -- This problem is ignorable. */
+  /* stylelint-disable -- This problem is ignorable. */
   font-family: "Crete Round";
   font-size: 3.5rem;
   font-weight: 400;
