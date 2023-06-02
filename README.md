@@ -58,6 +58,9 @@ A Microverse Perosnal Portfolio Project developed with duo of HTML and CSS. In a
 - Add Header to the index.html file.
 - Add Hero section to the index.html file.
 - Add global styling variables to style.html file.
+- Add Work section to the index.html file.
+- Add About me section to the index.html file.
+- Add more styles to the styles.css file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -146,8 +149,6 @@ I have added the linters or tests in order to avoid anykind of typos and ensure 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Add Recent Work
-- [ ] Add About Me
 - [ ] Add Tech Stacks
 - [ ] Add Qoutes
 - [ ] Add Contact Form
