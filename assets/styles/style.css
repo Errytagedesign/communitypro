@@ -64,6 +64,7 @@ a {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 /* ====== GLOBAL STYLE END ==== */
@@ -200,11 +201,14 @@ figure img {
   font-weight: 500;
   padding: 0.625em 0.75em;
   background: rgba(255, 255, 255, 0.24);
+  transition: 0.3s all ease-in-out;
 }
 
 .work-card ul li:hover {
   background: var(--primary-color);
   color: var(--white);
+  transform: scale(1.2);
+  transition: 0.3s all ease-in-out;
 }
 
 .work-card button {
