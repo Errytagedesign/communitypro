@@ -259,14 +259,14 @@ figure img {
   flex-direction: column;
   justify-content: space-between;
   background: var(--black);
-  padding: 5em 2em;
+  padding: 5em 0;
 }
 
 .about-hero {
   background:
     url("../images/aboutBg.svg") no-repeat bottom
     right;
-  padding: 11em 0;
+  padding: 4em 2em 10em;
 }
 
 .about-hero h2 {
@@ -299,8 +299,8 @@ figure img {
   display: grid;
   place-content: center;
   border-top: solid 1px var(--white);
-  padding: 11em 2em;
-  margin-top: 1em;
+  padding: 5em 2em 0;
+  margin: 1em 2em 1em;
   text-align: center;
 }
 
