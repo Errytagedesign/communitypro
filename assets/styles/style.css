@@ -13,9 +13,8 @@ body {
   padding: 0;
   margin: 0;
   font-family:
-    "Roboto",
-    "Crete Round",
     "Poppins",
+    "Roboto",
     "Helvetica",
     "Arial",
     "Verdana",
@@ -53,6 +52,20 @@ ul {
   padding: 0;
 }
 
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
 /* ====== GLOBAL STYLE END ==== */
 
 /* ====== GLOBAL VARIABLES START ==== */
@@ -63,6 +76,7 @@ ul {
   --white: #fff;
   --light-yellow: #fff5e1;
   --light-grey: #dbd8d7;
+  --crete: "Crete Round", sans-serif;
 }
 
 /* ====== GLOBAL VARIABLES END ==== */
@@ -100,7 +114,7 @@ header .my-logo {
 }
 
 .hero h1 {
-  font-family: "Crete Round", sans-serif;
+  font-family: var(--crete);
   font-size: 3.5rem;
   font-weight: 400;
   line-height: 4rem;
@@ -108,13 +122,10 @@ header .my-logo {
 }
 
 .hero h3 {
+  font-family: "Roboto", sans-serif;
   font-size: 1.45rem;
   color: var(--light-yellow);
   margin: 0.5em 0;
-}
-
-.hero p {
-  font-family: "Poppins", sans-serif;
 }
 
 .hero .icons {
@@ -127,3 +138,103 @@ header .my-logo {
 }
 
 /* ====== HERO SECTION END ==== */
+
+/* ====== WORK SECTION START ==== */
+
+.works-container {
+  display: grid;
+  place-items: center;
+  padding: 9em 0.5em;
+  color: var(--black);
+}
+
+hgroup {
+  width: 90%;
+}
+
+hgroup h2 {
+  width: 100%;
+  font-family: var(--crete);
+  font-size: 2.5rem;
+  border-bottom: 1px solid var(--black);
+  padding: 2em 0;
+  margin-bottom: 2em;
+}
+
+.work-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1em auto;
+  background: linear-gradient(#2626260a, #2626267e), url("../images//cardBg.png")  no-repeat;
+  background-size: cover;
+  color: var(--white);
+}
+
+figure img {
+  width: 100%;
+}
+
+.work-card h3 {
+  font-family: var(--crete);
+  font-size: 2rem;
+  margin: 0.75em 0;
+  line-height: 44px;
+}
+
+.work-card p {
+  font-size: 1rem;
+  margin-bottom: 0.75em;
+}
+
+.work-card ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.work-card ul li {
+  font-weight: 500;
+  padding: 0.625em 0.75em;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.work-card ul li:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.work-card button {
+  padding: 0.75em;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--primary-color);
+  margin-top: 1em;
+}
+
+#Multi-Post {
+  background: var(--white);
+  color: var(--black);
+}
+
+#Multi-Post button {
+  width: 40%;
+}
+
+#Multi-Post ul {
+  width: 100%;
+}
+
+#Multi-Post ul li {
+  border: solid 1px var(--black);
+}
+
+.work-contents {
+  padding: 7em 1.3em 0.5em;
+}
+
+/* ====== WORK SECTION END ==== */
