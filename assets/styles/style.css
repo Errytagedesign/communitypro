@@ -346,3 +346,66 @@ figure img {
 }
 
 /* ====== ABOUT SECTION END ==== */
+
+/* ====== CONTACT FORM START ==== */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--black);
+  width: 95%;
+  padding: 5em 2em;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.contact-form .form-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  margin: 5em auto;
+}
+
+.form-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.5em auto;
+}
+
+.form-items input {
+  padding: 0.7em;
+  border: 0;
+  border-bottom: solid 1px var(--light-grey);
+}
+
+.form-items textarea {
+  padding: 1em 0.5em;
+  border: 0;
+  background: #fbf8f7;
+}
+
+.button {
+  padding: 0.75em;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--primary-color);
+  margin: 2em 0;
+  transition: 0.3s all ease-in-out;
+}
+
+.button:hover {
+  background: var(--black);
+  color: var(--primary-color);
+  transform: scale(1.2);
+  transition: 0.3s all ease-in-out;
+}
+
+/* ====== CONTACT FORM END ==== */
