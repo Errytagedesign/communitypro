@@ -431,12 +431,13 @@
           to chat please get in touch.
         </h2>
 
-        <form>
+        <form action="https://formspree.io/f/mgebjlge" method="POST">
           <ul class="form-list">
             <li class="form-items">
-              <label for="name"> </label>
+              <label for="Full Name"> </label>
               <input
-                type="name"
+                type="text"
+                name="Full Name"
                 placeholder="Full name"
                 minlength="2"
                 maxlength="30"
@@ -447,6 +448,7 @@
               <label for="email"> </label>
               <input
                 type="email"
+                name="email"
                 placeholder="Email address"
                 maxlength="30"
                 required
@@ -458,6 +460,7 @@
                 rows="6"
                 cols="50"
                 maxlength="500"
+                name="message"
                 placeholder="Write me something..."
                 required
               ></textarea>
