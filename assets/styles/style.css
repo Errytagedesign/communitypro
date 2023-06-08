@@ -313,6 +313,8 @@ figure img {
     width: 90%;
     margin: 0 auto;
     gap: 20px;
+    padding-top: 2em;
+    overflow: hidden;
   }
 
   .work-card,
@@ -370,6 +372,25 @@ figure img {
   hgroup,
   #Multi-Post {
     grid-column: 1 / span 3;
+  }
+
+  hgroup h2 {
+    border-bottom: 0;
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  hgroup h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: var(--black);
+    height: 1px;
+    right: 0;
+    width: 70%;
   }
 }
 
@@ -492,6 +513,10 @@ figure img {
     grid-template-columns: 1fr 1fr 1fr;
     text-align: start;
   }
+
+  .skill-sets-wrapper {
+    justify-content: flex-start;
+  }
 }
 
 /* ====== ABOUT SECTION END ==== */
@@ -580,6 +605,34 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form {
+    flex-direction: row;
+    width: 85%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .contact-form h2 {
+    text-align: start;
+    width: 35%;
+  }
+
+  form {
+    width: 65%;
+  }
+
+  .contact-form .form-list {
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+  .social-icons {
+    width: 20%;
+  }
 }
 
 /* ====== CONTACT FORM END ==== */
