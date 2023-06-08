@@ -85,12 +85,16 @@ button {
 /* ====== HEADER START ==== */
 
 header {
+  background: #3c3a39;
+}
+
+nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #3c3a39;
   padding: 1.5em 1em;
+  margin: 0 auto;
 }
 
 header .my-logo {
@@ -98,6 +102,26 @@ header .my-logo {
   font-weight: 700;
   color: var(--white);
   text-decoration: none;
+}
+
+.nav-items {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    width: 80%;
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+  }
+
+  .nav-icon {
+    display: none;
+  }
 }
 
 /* ====== HEADER END ==== */
@@ -136,6 +160,36 @@ header .my-logo {
   justify-content: space-between;
   align-items: center;
   width: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    background:
+      var(--black) url("../images/desktopHeroBg.svg") no-repeat center
+      right;
+    background-size: contain;
+    padding: 11em 2em;
+  }
+
+  .hero-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+  }
+
+  .introduction {
+    width: 90%;
+    order: 1;
+  }
+
+  .hero .icons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4%;
+  }
 }
 
 /* ====== HERO SECTION END ==== */
