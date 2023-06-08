@@ -222,7 +222,9 @@ hgroup h2 {
   flex-direction: column;
   justify-content: space-between;
   margin: 1em auto;
-  background: linear-gradient(#2626260a, #2626267e), url("../images//cardBg.png")  no-repeat;
+  background:
+    linear-gradient(#2626265a, #262626),
+    url("../images/cardBg.png");
   background-size: cover;
   color: var(--white);
   overflow: hidden;
@@ -260,8 +262,9 @@ figure img {
 }
 
 .work-card ul li:hover {
-  background: var(--primary-color);
-  color: var(--white);
+  background: var(--light-yellow);
+  color: var(--primary-color);
+  border: solid 1px var(--primary-color);
   transform: scale(1.2);
   transition: 0.3s all ease-in-out;
 }
@@ -277,8 +280,9 @@ figure img {
 }
 
 .work-card button:hover {
-  background: var(--black);
+  background: var(--light-yellow);
   color: var(--primary-color);
+  border: solid 1px var(--primary-color);
   transform: scale(1.2);
   transition: 0.3s all ease-in-out;
 }
@@ -302,6 +306,70 @@ figure img {
 
 .work-contents {
   padding: 7em 1.3em 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .works-container {
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .work-card {
+    width: 100%;
+  }
+
+  .work-card button {
+    display: none;
+  }
+
+  .work-contents ul {
+    margin-bottom: 2em;
+  }
+
+  .work-card:hover ul {
+    margin-bottom: 0;
+  }
+
+  .work-card:hover {
+    background: url("../images/cardBg.png") no-repeat;
+    background-size: cover;
+  }
+
+  .Multi-Post-content button {
+    margin-top: 2em;
+  }
+
+  .work-card:hover button {
+    display: block;
+  }
+
+  #Multi-Post {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #Multi-Post figure {
+    width: 56%;
+  }
+
+  .Multi-Post-content {
+    width: 40%;
+  }
+
+  .Multi-Post-content h3 {
+    margin: 0 0 1em 0;
+  }
+
+  .Multi-Post-content p {
+    margin-bottom: 1.3em;
+  }
+
+  hgroup,
+  #Multi-Post {
+    grid-column: 1 / span 3;
+  }
 }
 
 /* ====== WORK SECTION END ==== */
@@ -343,8 +411,9 @@ figure img {
 }
 
 .about-hero .about-btn:hover {
-  background: var(--white);
+  background: var(--light-yellow);
   color: var(--primary-color);
+  border: solid 1px var(--primary-color);
   transform: scale(1.2);
   transition: 0.3s all ease-in-out;
 }
@@ -465,8 +534,9 @@ form {
 }
 
 .button:hover {
-  background: var(--black);
+  background: var(--light-yellow);
   color: var(--primary-color);
+  border: solid 1px var(--primary-color);
   transform: scale(1.2);
   transition: 0.3s all ease-in-out;
 }
