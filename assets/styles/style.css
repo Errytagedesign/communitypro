@@ -95,6 +95,7 @@ nav {
   align-items: center;
   padding: 1.5em 1em;
   margin: 0 auto;
+  position: relative;
 }
 
 header .my-logo {
@@ -104,7 +105,47 @@ header .my-logo {
   text-decoration: none;
 }
 
+.close-navbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100vw;
+  padding: 2em 1em;
+  height: 100vh;
+  left: 800px;
+  top: 0;
+  background: var(--black);
+  align-items: end;
+  transition: all 1s ease-in-out;
+}
+
+.open-navbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100vw;
+  padding: 2em 1em;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: var(--black);
+  align-items: end;
+  transition: all 1s ease-in-out;
+}
+
 .nav-items {
+  width: 100%;
+}
+
+.nav-list {
+  color: var(--light-yellow);
+  padding: 2em 1em;
+  font-weight: 700;
+  font-size: 2rem;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.nav-list:last-child {
   display: none;
 }
 
@@ -230,7 +271,7 @@ hgroup h2 {
   overflow: hidden;
 }
 
-figure img {
+.work-card figure img {
   width: 100%;
 }
 
