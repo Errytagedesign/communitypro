@@ -126,10 +126,10 @@ header .my-logo {
   position: fixed;
   width: 100vw;
   padding: 2em 1em;
-  height: 100vh;
+  height: 100%;
   left: 0;
   top: 0;
-  background: var(--black);
+  background: #3c3a39;
   align-items: end;
   transition: all 1s ease-in-out;
 }
@@ -140,10 +140,11 @@ header .my-logo {
 
 .nav-list {
   color: var(--light-yellow);
-  padding: 2em 1em;
+  padding: 0.75em 1em;
   font-weight: 700;
   font-size: 2rem;
   border-bottom: 1px solid var(--light-grey);
+  margin-bottom: 1em;
 }
 
 .nav-list:last-child {
