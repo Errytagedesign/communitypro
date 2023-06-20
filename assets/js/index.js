@@ -9,3 +9,7 @@ const handleClick = () => {
 
 openNavIcon.addEventListener("click", handleClick);
 closeNavIcon.addEventListener("click", handleClick);
+
+navList.forEach((navItem) => {
+  navItem.addEventListener("click", handleClick);
+});
