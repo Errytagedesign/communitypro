@@ -175,7 +175,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     seeProjectBtn.id = work.id;
 
-    seeProjectBtn.addEventListener("click", handleModalToggle);
+    // Onclick of the see project button, the modal popup, and we used the corresponding id to display the project details
+    seeProjectBtn.addEventListener("click", function () {
+      handleModalToggle(work.id);
+      seeProjectDetails(work);
+    });
 
     imageSrc.src = work.previewImage;
     imageSrc.alt = "Codeeq Portfolio project samples";
@@ -213,7 +217,11 @@ window.addEventListener("DOMContentLoaded", () => {
     workContents.className = "work-contents";
     seeProjectBtn.id = work.id;
 
-    seeProjectBtn.addEventListener("click", handleModalToggle);
+    // Onclick of the see project button, the modal popup, and we used the corresponding id to display the project details
+    seeProjectBtn.addEventListener("click", function () {
+      handleModalToggle(work.id);
+      seeProjectDetails(work);
+    });
 
     recentWorkContainer.appendChild(workCard);
     workCard.appendChild(workContents);
@@ -244,19 +252,41 @@ popUp = document.createElement("section");
 homePage.appendChild(popUp);
 popUp.className = "closeModal";
 
+const toggleModal = document.querySelector(".closeModal");
+function handleModalToggle() {
+  toggleModal.classList.toggle("showModal");
+}
+
+// 4. Create an onclick event for the "see project button" based on the id of the clicked button and render the project details
+
+let workDetails = document.createElement("article");
+let workContents = document.createElement("div");
+let workTitle = document.createElement("h3");
+let workDescription = document.createElement("p");
+let seeProjectBtn = document.createElement("button");
+let stackUl = document.createElement("ul");
 let figure = document.createElement("figure");
 let imageSrc = document.createElement("img");
 
-popUp.appendChild(figure);
+// add classNames
+workDetails.className = "project-card";
+workContents.className = "project-contents";
+
+// appendChildren
+
+popUp.appendChild(workDetails);
+workDetails.appendChild(workContents);
+workContents.append(workTitle, workDescription, figure);
 figure.appendChild(imageSrc);
 imageSrc.src = "/assets/images/Cancel.png";
 
 imageSrc.addEventListener("click", handleModalToggle);
 
-const toggleModal = document.querySelector(".closeModal");
-
-function handleModalToggle() {
-  toggleModal.classList.toggle("showModal");
+function seeProjectDetails(work) {
+  if (work.id) {
+    workTitle.textContent = work.title;
+    workDescription = work.description;
+  }
 }
-// 4. Create an onclick event for the "see project button" based on the id of the clicked button
+
 // 5. Display the corresponding data.
