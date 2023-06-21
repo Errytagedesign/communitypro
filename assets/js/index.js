@@ -267,6 +267,8 @@ let seeProjectBtn = document.createElement("button");
 let stackUl = document.createElement("ul");
 let figure = document.createElement("figure");
 let imageSrc = document.createElement("img");
+let liveLinkBtn = document.createElement("button");
+let sourceLinkBtn = document.createElement("button")
 
 // add classNames
 workDetails.className = "project-card";
@@ -286,6 +288,8 @@ function seeProjectDetails(work) {
   if (work.id) {
     workTitle.textContent = work.title;
     workDescription = work.description;
+    liveLinkBtn.textContent = "See live";
+    sourceLinkBtn.textContent = "See source";
   }
 }
 
