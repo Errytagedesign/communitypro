@@ -186,6 +186,7 @@ header .my-logo {
     padding: 2em 1em;
     font-weight: 400;
     font-size: 1rem;
+    margin-bottom: 0;
     border-bottom: 0 solid var(--light-grey);
   }
 
