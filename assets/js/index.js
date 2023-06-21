@@ -231,5 +231,9 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // 3. Modal to toggle the popup
+const toggle = document.querySelector(".showModal");
+function handleModalToggle() {
+  toggle.classList.toggle("closeModal");
+}
 // 4. Create an onclick event for the "see project button" based on the id of the clicked button
 // 5. Display the corresponding data.
