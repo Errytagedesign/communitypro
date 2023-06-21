@@ -143,6 +143,9 @@ const recentWork = [
 ];
 
 // 2. Create Recent work html using createElement method
+// get hompage container class so as to append popModal as child
+const homePage = document.querySelector(".home");
+// get recentwork container class so as to append workCard as child
 const recentWorkContainer = document.querySelector(".works-container");
 
 // 3. Iterate over recent work data to display them on the browser using the document elements created
@@ -150,7 +153,6 @@ const recentWorkContainer = document.querySelector(".works-container");
 window.addEventListener("DOMContentLoaded", () => {
   // reder the featured recent work card
   recentWork.slice(0, 1).map((work) => {
-    console.log(work.previewImage);
     let featuredWork = document.createElement("article");
     let workContents = document.createElement("div");
     let workTitle = document.createElement("h3");
@@ -170,6 +172,10 @@ window.addEventListener("DOMContentLoaded", () => {
     featuredWork.appendChild(workContents);
 
     workContents.append(workTitle, workDescription, stackUl, seeProjectBtn);
+
+    seeProjectBtn.id = work.id;
+
+    seeProjectBtn.addEventListener("click", handleModalToggle);
 
     imageSrc.src = work.previewImage;
     imageSrc.alt = "Codeeq Portfolio project samples";
@@ -205,6 +211,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     workCard.className = "work-card";
     workContents.className = "work-contents";
+    seeProjectBtn.id = work.id;
+
+    seeProjectBtn.addEventListener("click", handleModalToggle);
 
     recentWorkContainer.appendChild(workCard);
     workCard.appendChild(workContents);
@@ -231,9 +240,23 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // 3. Modal to toggle the popup
-const toggle = document.querySelector(".showModal");
+popUp = document.createElement("section");
+homePage.appendChild(popUp);
+popUp.className = "closeModal";
+
+let figure = document.createElement("figure");
+let imageSrc = document.createElement("img");
+
+popUp.appendChild(figure);
+figure.appendChild(imageSrc);
+imageSrc.src = "/assets/images/Cancel.png";
+
+imageSrc.addEventListener("click", handleModalToggle);
+
+const toggleModal = document.querySelector(".closeModal");
+
 function handleModalToggle() {
-  toggle.classList.toggle("closeModal");
+  toggleModal.classList.toggle("showModal");
 }
 // 4. Create an onclick event for the "see project button" based on the id of the clicked button
 // 5. Display the corresponding data.
