@@ -371,15 +371,20 @@ function seeProjectDetails(work) {
 }
 
 // Client side validation
+const form = document.getElementById("form");
+const error = document.getElementById("error");
+const email = document.getElementById("email");
+
+// Whenever the email input field is active, the error message should be removed
+email.addEventListener("click", function () {
+  if (email === document.activeElement) error.style.display = "none";
+});
+
 form.addEventListener("submit", (event) => {
   const regexMail = /[A-Z]/;
 
   if (regexMail.test(email.value)) {
-    error.innerHTML = errorMsg;
-    email.classList.add("error");
     event.preventDefault();
-  }
-  if (!error.classList.classname === "hide") {
-    error.classList.add("hide");
+    error.style.display = "block";
   }
 });
