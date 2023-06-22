@@ -383,5 +383,7 @@ email.addEventListener("click", function () {
 form.addEventListener("submit", (event) => {
   const regexMail = /[A-Z]/;
   if (regexMail.test(email.value)) {
+    event.preventDefault();
+    error.style.display = "block";
   }
 });
