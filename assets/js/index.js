@@ -343,6 +343,8 @@ liveImg.src = "/assets/images/live.png";
 gitImg.src = "/assets/images/github.png";
 closeImg.src = "/assets/images/Cancel.png";
 
+// 5. Display the corresponding data.
+
 function seeProjectDetails(work) {
   stackUL.innerHTML = "";
   if (work.id) {
@@ -368,4 +370,16 @@ function seeProjectDetails(work) {
   }
 }
 
-// 5. Display the corresponding data.
+// Client side validation
+form.addEventListener("submit", (event) => {
+  const regexMail = /[A-Z]/;
+
+  if (regexMail.test(email.value)) {
+    error.innerHTML = errorMsg;
+    email.classList.add("error");
+    event.preventDefault();
+  }
+  if (!error.classList.classname === "hide") {
+    error.classList.add("hide");
+  }
+});
