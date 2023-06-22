@@ -2,6 +2,7 @@ const openNavIcon = document.querySelector(".nav-icon");
 const closeNavIcon = document.querySelector(".close");
 const toggleNavBar = document.querySelector(".close-navbar");
 const navList = document.querySelectorAll(".nav-list");
+const body = document.querySelector("body");
 
 // Navbar functions
 const handleClick = () => {
@@ -23,8 +24,11 @@ const recentWork = [
   {
     id: 1,
     title: "Multi-Post Stories",
+    shortDescription:
+      "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
+
     description:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required. This has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.   \n<br> \n<br>   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.",
     previewImage: "/assets/images/multiplestory.png",
     technologies: [
       { name: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
@@ -41,9 +45,13 @@ const recentWork = [
   {
     id: 2,
     title: "Data Dashboard Healthcare",
-    description:
+    shortDescription:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    previewImage: "",
+
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.   \n<br> \n<br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.",
+
+    previewImage: "/assets/images/cardImg3.png",
     technologies: [
       {
         name: "HTML",
@@ -58,9 +66,13 @@ const recentWork = [
   {
     id: 3,
     title: "Data Dashboard Healthcare",
-    description:
+    shortDescription:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    previewImage: "",
+
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.    \n<br> \n<br>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.",
+
+    previewImage: "/assets/images/cardImg2.png",
     technologies: [
       {
         name: "HTML",
@@ -75,9 +87,13 @@ const recentWork = [
   {
     id: 4,
     title: "Data Dashboard Healthcare",
-    description:
+    shortDescription:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    previewImage: "",
+
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.    \n<br> \n<br>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.",
+
+    previewImage: "/assets/images/cardImg.png",
     technologies: [
       {
         name: "HTML",
@@ -92,9 +108,13 @@ const recentWork = [
   {
     id: 5,
     title: "Data Dashboard Healthcare",
-    description:
+    shortDescription:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    previewImage: "",
+
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.    \n<br> \n<br>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.",
+
+    previewImage: "/assets/images/cardImg3.png",
     technologies: [
       {
         name: "HTML",
@@ -109,9 +129,13 @@ const recentWork = [
   {
     id: 6,
     title: "Data Dashboard Healthcare",
-    description:
+    shortDescription:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    previewImage: "",
+
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.    \n<br> \n<br>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.",
+
+    previewImage: "/assets/images/cardImg2.png",
     technologies: [
       {
         name: "HTML",
@@ -126,9 +150,13 @@ const recentWork = [
   {
     id: 7,
     title: "Data Dashboard Healthcare",
-    description:
+    shortDescription:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    previewImage: "",
+
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.    \n<br> \n<br>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.",
+
+    previewImage: "/assets/images/cardImg.png",
     technologies: [
       {
         name: "HTML",
@@ -197,7 +225,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     workTitle.textContent = work.title;
-    workDescription.textContent = work.description;
+    workDescription.textContent = work.shortDescription;
     seeProjectBtn.textContent = "See Project";
   });
 
@@ -242,7 +270,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     workTitle.textContent = work.title;
-    workDescription.textContent = work.description;
+    workDescription.textContent = work.shortDescription;
     seeProjectBtn.textContent = "See Project";
   });
 });
@@ -252,44 +280,91 @@ popUp = document.createElement("section");
 homePage.appendChild(popUp);
 popUp.className = "closeModal";
 
-const toggleModal = document.querySelector(".closeModal");
-function handleModalToggle() {
-  toggleModal.classList.toggle("showModal");
-}
-
 // 4. Create an onclick event for the "see project button" based on the id of the clicked button and render the project details
 
 let workDetails = document.createElement("article");
+let workContentsTitle = document.createElement("div");
 let workContents = document.createElement("div");
+let BtnsContent = document.createElement("div");
 let workTitle = document.createElement("h3");
 let workDescription = document.createElement("p");
 let seeProjectBtn = document.createElement("button");
-let stackUl = document.createElement("ul");
+let stackUL = document.createElement("ul");
+let closeIcon = document.createElement("figure");
 let figure = document.createElement("figure");
-let imageSrc = document.createElement("img");
+let closeImg = document.createElement("img");
+let featuredImg = document.createElement("img");
+let BtnContainer = document.createElement("aside");
 let liveLinkBtn = document.createElement("button");
-let sourceLinkBtn = document.createElement("button")
+let sourceLinkBtn = document.createElement("button");
+let liveImg = document.createElement("img");
+let gitImg = document.createElement("img");
+
+const toggleModal = document.querySelector(".closeModal");
+function handleModalToggle() {
+  toggleModal.classList.toggle("showModal");
+
+  // Preventing the body scroll when popup is active
+  toggleModal.classList.contains("showModal")
+    ? (body.style.overflow = "hidden")
+    : (body.style = "");
+}
+
+// Close popup
+closeIcon.addEventListener("click", handleModalToggle);
 
 // add classNames
 workDetails.className = "project-card";
 workContents.className = "project-contents";
+BtnsContent.className = "btnNtext";
+workContentsTitle.className = "project-title";
+closeIcon.className = "closePop";
+BtnContainer.className = "Btns";
+stackUL.className = "stackContainer";
 
 // appendChildren
 
 popUp.appendChild(workDetails);
-workDetails.appendChild(workContents);
-workContents.append(workTitle, workDescription, figure);
-figure.appendChild(imageSrc);
-imageSrc.src = "/assets/images/Cancel.png";
+workDetails.append(workContentsTitle, workContents);
+workContentsTitle.append(closeIcon, workTitle, stackUL);
+workContents.append(figure, BtnsContent);
+BtnsContent.append(workDescription, BtnContainer);
+BtnContainer.append(liveLinkBtn, sourceLinkBtn);
+closeIcon.appendChild(closeImg);
+figure.appendChild(featuredImg);
 
-imageSrc.addEventListener("click", handleModalToggle);
+liveLinkBtn.textContent = "See live";
+sourceLinkBtn.textContent = "See source";
+
+sourceLinkBtn.appendChild(gitImg);
+liveLinkBtn.appendChild(liveImg);
+
+liveImg.src = "/assets/images/live.png";
+gitImg.src = "/assets/images/github.png";
+closeImg.src = "/assets/images/Cancel.png";
 
 function seeProjectDetails(work) {
+  stackUL.innerHTML = "";
   if (work.id) {
     workTitle.textContent = work.title;
-    workDescription = work.description;
-    liveLinkBtn.textContent = "See live";
-    sourceLinkBtn.textContent = "See source";
+    workDescription.innerHTML = work.description.replace(/\n<br\?>/g, "<br>");
+    featuredImg.src = work.previewImage;
+
+    work.technologies.map((tech) => {
+      let stackLi = document.createElement("li");
+      let stackLink = document.createElement("a");
+
+      stackLi.appendChild(stackLink);
+
+      stackLi.className = "stackList";
+
+      stackLink.textContent = tech.name;
+      stackLink.href = tech.link;
+      stackLink.target = "_blank";
+      stackLink.rel = " noopener noreferrer";
+
+      stackUL.appendChild(stackLi);
+    });
   }
 }
 
