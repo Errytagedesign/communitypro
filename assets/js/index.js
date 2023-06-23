@@ -389,7 +389,6 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     error.style.display = "block";
   }
-  persistFormData();
 });
 
 // Persist formData in local storage
@@ -406,15 +405,17 @@ let formFilledArray = [];
 Object.values(formData).forEach((data) => {
   // For each of the data, add an onChange event to get it's value.
   data.addEventListener("change", function () {
+    console.log(data.value);
     // To avoid duplicate in the formFilledArray, check if for errors
     if (data.name === "email") {
       const regexMail = /[A-Z]/;
       if (regexMail.test(data.value)) {
-        return;
+        return (error.style.display = "block");
       }
     }
     // Then pass the value as params to persistFormData function
     formFilledArray.push(data.value);
+    persistFormData();
   });
 });
 
