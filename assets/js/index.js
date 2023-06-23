@@ -409,6 +409,9 @@ Object.values(formData).forEach((data) => {
     // To avoid duplicate in the formFilledArray, check if for errors
     if (data.name === "email") {
       const regexMail = /[A-Z]/;
+      if (regexMail.test(data.value)) {
+        return;
+      }
     }
     // Then pass the value as params to persistFormData function
     formFilledArray.push(data.value);
