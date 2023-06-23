@@ -432,5 +432,6 @@ window.addEventListener('DOMContentLoaded', () => {
     names.value = userData[0];
     email.value = userData[1];
     message.value = userData[2];
+    console.log(userData)
   }
 });
