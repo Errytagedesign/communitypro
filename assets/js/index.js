@@ -372,8 +372,11 @@ function seeProjectDetails(work) {
 
 // Client side validation
 const form = document.getElementById("form");
-const error = document.getElementById("error");
+const names = document.getElementById("names");
 const email = document.getElementById("email");
+const message = document.getElementById("message");
+const submit = document.getElementById("submitBtn");
+const error = document.getElementById("error");
 
 // Whenever the email input field is active, the error message should be removed
 email.addEventListener("click", function () {
@@ -385,5 +388,46 @@ form.addEventListener("submit", (event) => {
   if (regexMail.test(email.value)) {
     event.preventDefault();
     error.style.display = "block";
+  }
+  persistFormData();
+});
+
+// Persist formData in local storage
+// Add all input into an object
+const formData = {
+  fullName: names,
+  userEmail: email,
+  userMessages: message,
+};
+
+let formFilledArray = [];
+
+// Convert the object to an array and loop throught it
+Object.values(formData).forEach((data) => {
+  // For each of the data, add an onChange event to get it's value.
+  data.addEventListener("change", function () {
+    // To avoid duplicate in the formFilledArray, check if for errors
+    if (data.name === "email") {
+      const regexMail = /[A-Z]/;
+      if (regexMail.test(data.value)) {
+        return;
+      }
+    }
+    // Then pass the value as params to persistFormData function
+    formFilledArray.push(data.value);
+  });
+});
+
+// Persist data to localStorage on submit
+function persistFormData() {
+  localStorage.setItem("userData", JSON.stringify(formFilledArray));
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.userData !== undefined) {
+    const userData = JSON.parse(localStorage.getItem("userData"));
+    names.value = userData[0];
+    email.value = userData[1];
+    message.value = userData[2];
   }
 });
