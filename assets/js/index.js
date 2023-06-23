@@ -189,7 +189,7 @@ function handleModalToggle() {
   toggleModal.classList.toggle('showModal');
 
   // Preventing the body scroll when popup is active
-  if(toggleModal.classList.contains('showModal')){
+  if (toggleModal.classList.contains('showModal')) {
     body.style.overflow = 'hidden';
   } else {
     body.style = '';
@@ -415,8 +415,8 @@ Object.values(formData).forEach((data) => {
     if (data.name === 'email') {
       const regexMail = /[A-Z]/;
       if (regexMail.test(data.value)) {
-        error.style.display = 'block'
-        return
+        error.style.display = 'block';
+        return;
       }
     }
     // Then pass the value as params to persistFormData function
