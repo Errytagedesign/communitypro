@@ -16,17 +16,15 @@ navList.forEach((navItem) => {
   navItem.addEventListener('click', handleClick);
 });
 
-
 const toggleModal = document.querySelector('.closeModal');
 function handleModalToggle() {
   toggleModal.classList.toggle('showModal');
 
   // Preventing the body scroll when popup is active
   toggleModal.classList.contains('showModal')
-    ? (body.style.overflow = 'hidden')
-    : (body.style = '');
+    ? body.style.overflow = 'hidden'
+    : body.style = ""
 }
-
 
 // 1. Create array of objects to host all recent work data
 
@@ -191,6 +189,88 @@ const recentWorkContainer = document.querySelector('.works-container');
 // 3. Iterate over recent work data to display them on the browser 
 // using the document elements created
 
+
+// 3. Modal to toggle the popup
+const popUp = document.createElement('section');
+homePage.appendChild(popUp);
+popUp.className = 'closeModal';
+
+// 4. Create an onclick event for the 'see project button' based 
+// on the id of the clicked button and render the project details
+
+const workDetails = document.createElement('article');
+const workContentsTitle = document.createElement('div');
+const workContents = document.createElement('div');
+const BtnsContent = document.createElement('div');
+const workTitle = document.createElement('h3');
+const workDescription = document.createElement('p');
+const stackUL = document.createElement('ul');
+const closeIcon = document.createElement('figure');
+const figure = document.createElement('figure');
+const closeImg = document.createElement('img');
+const featuredImg = document.createElement('img');
+const BtnContainer = document.createElement('aside');
+const liveLinkBtn = document.createElement('button');
+const sourceLinkBtn = document.createElement('button');
+const liveImg = document.createElement('img');
+const gitImg = document.createElement('img');
+
+// Close popup
+closeIcon.addEventListener('click', handleModalToggle);
+
+// add classNames
+workDetails.className = 'project-card';
+workContents.className = 'project-contents';
+BtnsContent.className = 'btnNtext';
+workContentsTitle.className = 'project-title';
+closeIcon.className = 'closePop';
+BtnContainer.className = 'Btns';
+stackUL.className = 'stackContainer';
+
+// appendChildren
+popUp.appendChild(workDetails);
+workDetails.append(workContentsTitle, workContents);
+workContentsTitle.append(closeIcon, workTitle, stackUL);
+workContents.append(figure, BtnsContent);
+BtnsContent.append(workDescription, BtnContainer);
+BtnContainer.append(liveLinkBtn, sourceLinkBtn);
+closeIcon.appendChild(closeImg);
+figure.appendChild(featuredImg);
+
+liveLinkBtn.textContent = 'See live';
+sourceLinkBtn.textContent = 'See source';
+
+sourceLinkBtn.appendChild(gitImg);
+liveLinkBtn.appendChild(liveImg);
+
+liveImg.src = '/assets/images/live.png';
+gitImg.src = '/assets/images/github.png';
+closeImg.src = '/assets/images/Cancel.png';
+
+// 5. Display the corresponding data.
+function seeProjectDetails(work) {
+  stackUL.innerHTML = '';
+  if (work.id) {
+    workTitle.textContent = work.title;
+    workDescription.innerHTML = work.description.replace(/\n<br\?>/g, '<br>');
+    featuredImg.src = work.previewImage;
+
+    work.technologies.forEach((tech) => {
+      const stackLi = document.createElement('li');
+      const stackLink = document.createElement('a');
+
+      stackLi.appendChild(stackLink);
+      stackLi.className = 'stackList';
+      stackLink.textContent = tech.name;
+      stackLink.href = tech.link;
+      stackLink.target = '_blank';
+      stackLink.rel = ' noopener noreferrer';
+
+      stackUL.appendChild(stackLi);
+    });
+  }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   // reder the featured recent work card
   recentWork.slice(0, 1).forEach((work) => {
@@ -262,7 +342,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Onclick of the see project button, the modal popup, and we 
     // used the corresponding id to display the project details
-    seeProjectBtn.addEventListener('click', function () {
+    seeProjectBtn.addEventListener('click', ()=> {
       handleModalToggle(work.id);
       seeProjectDetails(work);
     });
@@ -291,92 +371,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// 3. Modal to toggle the popup
-const popUp = document.createElement('section');
-homePage.appendChild(popUp);
-popUp.className = 'closeModal';
-
-// 4. Create an onclick event for the 'see project button' based 
-// on the id of the clicked button and render the project details
-
-const workDetails = document.createElement('article');
-const workContentsTitle = document.createElement('div');
-const workContents = document.createElement('div');
-const BtnsContent = document.createElement('div');
-const workTitle = document.createElement('h3');
-const workDescription = document.createElement('p');
-const seeProjectBtn = document.createElement('button');
-const stackUL = document.createElement('ul');
-const closeIcon = document.createElement('figure');
-const figure = document.createElement('figure');
-const closeImg = document.createElement('img');
-const featuredImg = document.createElement('img');
-const BtnContainer = document.createElement('aside');
-const liveLinkBtn = document.createElement('button');
-const sourceLinkBtn = document.createElement('button');
-const liveImg = document.createElement('img');
-const gitImg = document.createElement('img');
-
-
-// Close popup
-closeIcon.addEventListener('click', handleModalToggle);
-
-// add classNames
-workDetails.className = 'project-card';
-workContents.className = 'project-contents';
-BtnsContent.className = 'btnNtext';
-workContentsTitle.className = 'project-title';
-closeIcon.className = 'closePop';
-BtnContainer.className = 'Btns';
-stackUL.className = 'stackContainer';
-
-// appendChildren
-
-popUp.appendChild(workDetails);
-workDetails.append(workContentsTitle, workContents);
-workContentsTitle.append(closeIcon, workTitle, stackUL);
-workContents.append(figure, BtnsContent);
-BtnsContent.append(workDescription, BtnContainer);
-BtnContainer.append(liveLinkBtn, sourceLinkBtn);
-closeIcon.appendChild(closeImg);
-figure.appendChild(featuredImg);
-
-liveLinkBtn.textContent = 'See live';
-sourceLinkBtn.textContent = 'See source';
-
-sourceLinkBtn.appendChild(gitImg);
-liveLinkBtn.appendChild(liveImg);
-
-liveImg.src = '/assets/images/live.png';
-gitImg.src = '/assets/images/github.png';
-closeImg.src = '/assets/images/Cancel.png';
-
-// 5. Display the corresponding data.
-
-function seeProjectDetails(work) {
-  stackUL.innerHTML = '';
-  if (work.id) {
-    workTitle.textContent = work.title;
-    workDescription.innerHTML = work.description.replace(/\n<br\?>/g, '<br>');
-    featuredImg.src = work.previewImage;
-
-    work.technologies.forEach((tech) => {
-      const stackLi = document.createElement('li');
-      const stackLink = document.createElement('a');
-
-      stackLi.appendChild(stackLink);
-
-      stackLi.className = 'stackList';
-
-      stackLink.textContent = tech.name;
-      stackLink.href = tech.link;
-      stackLink.target = '_blank';
-      stackLink.rel = ' noopener noreferrer';
-
-      stackUL.appendChild(stackLi);
-    });
-  }
-}
 
 // Client side validation
 const form = document.getElementById('form');
@@ -386,7 +380,7 @@ const message = document.getElementById('message');
 const error = document.getElementById('error');
 
 // Whenever the email input field is active, the error message should be removed
-email.addEventListener('click',  ()=> {
+email.addEventListener('click', ()=> {
   if (email === document.activeElement) error.style.display = 'none';
 });
 
@@ -406,13 +400,12 @@ const formData = {
   userMessages: message,
 };
 
-let formFilledArray = [];
+const formFilledArray = [];
 
 // Convert the object to an array and loop throught it
 Object.values(formData).forEach((data) => {
   // For each of the data, add an onChange event to get it's value.
   data.addEventListener('change', function () {
-    console.log(data.value);
     // To avoid duplicate in the formFilledArray, check if for errors
     if (data.name === 'email') {
       const regexMail = /[A-Z]/;
@@ -431,7 +424,7 @@ function persistFormData() {
   localStorage.setItem('userData', JSON.stringify(formFilledArray));
 }
 
-window.addEventListener('DOMContentLoaded',  ()=> {
+window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.userData !== undefined) {
     const userData = JSON.parse(localStorage.getItem('userData'));
     names.value = userData[0];
