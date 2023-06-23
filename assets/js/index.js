@@ -428,6 +428,9 @@ Object.values(formData).forEach((data) => {
 window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.userData !== undefined) {
     const userData = JSON.parse(localStorage.getItem('userData'));
-    [names.value, email.value, message.value] = userData;
+
+    names.value = userData[0];
+    email.value = userData[1];
+    message.value = userData[2];
   }
 });
