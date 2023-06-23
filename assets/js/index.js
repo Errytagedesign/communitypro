@@ -16,16 +16,6 @@ navList.forEach((navItem) => {
   navItem.addEventListener('click', handleClick);
 });
 
-const toggleModal = document.querySelector('.closeModal');
-function handleModalToggle() {
-  toggleModal.classList.toggle('showModal');
-
-  // Preventing the body scroll when popup is active
-  toggleModal.classList.contains('showModal')
-    ? body.style.overflow = 'hidden'
-    : body.style = ""
-}
-
 // 1. Create array of objects to host all recent work data
 
 // Array of objects for recent works
@@ -186,16 +176,27 @@ const homePage = document.querySelector('.home');
 // get recentwork container class so as to append workCard as child
 const recentWorkContainer = document.querySelector('.works-container');
 
-// 3. Iterate over recent work data to display them on the browser 
+// 3. Iterate over recent work data to display them on the browser
 // using the document elements created
-
 
 // 3. Modal to toggle the popup
 const popUp = document.createElement('section');
 homePage.appendChild(popUp);
 popUp.className = 'closeModal';
 
-// 4. Create an onclick event for the 'see project button' based 
+const toggleModal = document.querySelector('.closeModal');
+function handleModalToggle() {
+  toggleModal.classList.toggle('showModal');
+
+  // Preventing the body scroll when popup is active
+  if(toggleModal.classList.contains('showModal')){
+    body.style.overflow = 'hidden';
+  } else {
+    body.style = '';
+  }
+}
+
+// 4. Create an onclick event for the 'see project button' based
 // on the id of the clicked button and render the project details
 
 const workDetails = document.createElement('article');
@@ -296,7 +297,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     seeProjectBtn.id = work.id;
 
-    // Onclick of the see project button, the modal popup, 
+    // Onclick of the see project button, the modal popup,
     // and we used the corresponding id to display the project details
     seeProjectBtn.addEventListener('click', () => {
       handleModalToggle(work.id);
@@ -325,7 +326,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // reder the general recent work card
 
-  // I used the .slice medthod to remove the first 
+  // I used the .slice medthod to remove the first
   // item in array and loop through the rest
   recentWork.slice(1).forEach((work) => {
     // Append workCard inside recent work div container and so on
@@ -340,9 +341,9 @@ window.addEventListener('DOMContentLoaded', () => {
     workContents.className = 'work-contents';
     seeProjectBtn.id = work.id;
 
-    // Onclick of the see project button, the modal popup, and we 
+    // Onclick of the see project button, the modal popup, and we
     // used the corresponding id to display the project details
-    seeProjectBtn.addEventListener('click', ()=> {
+    seeProjectBtn.addEventListener('click', () => {
       handleModalToggle(work.id);
       seeProjectDetails(work);
     });
@@ -371,7 +372,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 // Client side validation
 const form = document.getElementById('form');
 const names = document.getElementById('names');
@@ -380,7 +380,7 @@ const message = document.getElementById('message');
 const error = document.getElementById('error');
 
 // Whenever the email input field is active, the error message should be removed
-email.addEventListener('click', ()=> {
+email.addEventListener('click', () => {
   if (email === document.activeElement) error.style.display = 'none';
 });
 
@@ -402,15 +402,21 @@ const formData = {
 
 const formFilledArray = [];
 
+// Persist data to localStorage on submit
+function persistFormData() {
+  localStorage.setItem('userData', JSON.stringify(formFilledArray));
+}
+
 // Convert the object to an array and loop throught it
 Object.values(formData).forEach((data) => {
   // For each of the data, add an onChange event to get it's value.
-  data.addEventListener('change', function () {
+  data.addEventListener('change', () => {
     // To avoid duplicate in the formFilledArray, check if for errors
     if (data.name === 'email') {
       const regexMail = /[A-Z]/;
       if (regexMail.test(data.value)) {
-        return (error.style.display = 'block');
+        error.style.display = 'block'
+        return
       }
     }
     // Then pass the value as params to persistFormData function
@@ -419,16 +425,9 @@ Object.values(formData).forEach((data) => {
   });
 });
 
-// Persist data to localStorage on submit
-function persistFormData() {
-  localStorage.setItem('userData', JSON.stringify(formFilledArray));
-}
-
 window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.userData !== undefined) {
     const userData = JSON.parse(localStorage.getItem('userData'));
-    names.value = userData[0];
-    email.value = userData[1];
-    message.value = userData[2];
+    [names.value, email.value, message.value] = userData;
   }
 });
