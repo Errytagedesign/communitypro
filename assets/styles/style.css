@@ -273,11 +273,6 @@ header .my-logo {
 
 #Programs {
   color: var(--black);
-  background:
-    var(--light-grey) url("../images/programBg.jpeg") no-repeat center
-    center;
-  background-size: cover;
-  background-blend-mode: overlay;
   padding: 7em 0;
 }
 
@@ -316,9 +311,51 @@ header .my-logo {
 
 /* ====== WORK SECTION END ==== */
 
-/* ====== ABOUT SECTION START ==== */
+/* ====== SPEAKER SECTION START ==== */
 
-/* ====== ABOUT SECTION END ==== */
+.speakerContainer {
+  background:
+    var(--light-grey) url("../images/programBg.jpeg") no-repeat center
+    center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 7em 0;
+  color: var(--black);
+}
+
+.speakerCard {
+  border-radius: 12px;
+  border: solid 1px var(--primary-color);
+  margin-top: 1em;
+}
+
+.speakerCard:hover {
+  border-radius: 12px;
+  background: orange;
+  border: solid 1px var(--primary-color);
+  margin-top: 1em;
+  box-shadow: 2px 30px 20px rgba(0, 0, 0, 0.19);
+}
+
+.speakerCard .title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.speakerCard .topic {
+  background: var(--primary-color);
+  padding: 1em 0.7em;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* @media screen and (min-width: 900px) {
+  .speakerCard {
+    width: 19%;
+  }
+} */
+
+/* ====== SPEAKER SECTION END ==== */
 
 /* ====== CONTACT FORM START ==== */
 

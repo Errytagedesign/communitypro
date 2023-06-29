@@ -16,9 +16,7 @@ navList.forEach((navItem) => {
   navItem.addEventListener('click', handleClick);
 });
 
-// 1. Create array of objects to host all recent work data
-
-// Array of objects for recent works
+// Array of objects for Programs
 
 const programs = [
   {
@@ -60,8 +58,6 @@ const programs = [
 ];
 
 // Render programs dynamically by using map method
-// get recentwork container class so as to append workCard as child
-
 
 window.addEventListener("DOMContentLoaded", () => {
   const programsContainer = document.querySelector('.programs-container');
@@ -79,5 +75,71 @@ window.addEventListener("DOMContentLoaded", () => {
   })
 
   programsContainer.innerHTML = programCards.join("")
+
+})
+
+
+
+// Speakers dynamic rendering
+const Speakers = [
+  {
+    id: 1,
+    name: 'Melford Birakor',
+    imageUrl: './assets/images/team17.png',
+    topic:
+      'Demystifying Cryptocurrencies: Understanding the Basics',
+  },
+  {
+    id: 2,
+    name: 'Pablo Clueless',
+    imageUrl: './assets/images/team3.png',
+    topic:
+      'The Future of Front-end Development: Trends and Technologies',
+  },
+  {
+    id: 3,
+    imageUrl: './assets/images/team2.png',
+    name: 'Eke David',
+    topic:
+      'Building Scalable Web Applications with React and Redux',
+  },
+  {
+    id: 4,
+    imageUrl: './assets/images/team12.png',
+    name: 'Ezechi Ugo ',
+    topic:
+      'Empowering Accessibility: Inclusive Design for All Users',
+  },
+  {
+    id: 5,
+    imageUrl: './assets/images/team13.png',
+    name: 'Abdullah Hammad',
+    topic:
+      'Advancements in Natural Language Processing and Conversational AI',
+  },
+
+];
+
+// Render programs dynamically by using map method
+
+window.addEventListener("DOMContentLoaded", () => {
+  const speakersContainer = document.querySelector('.speakerCardContainer');
+
+  const speakerCards =  Speakers.map((card)=> {
+   return (`<article class=" d-flex flex-column flex-md-row justify-content-between mx-1 p-3 speakerCard col-12 col-md-5">
+
+   <figure class="col-12 col-md-5">
+   <img class="col-12" src="${card.imageUrl}" alt="communitypro tech meets speakers" >
+   </figure>
+<div class=" text-center text-md-start d-flex flex-column col-12 col-md-6" >
+<h3 class="title mb-3 mt-3 mt-md-0" > ${card.name} </h3>
+
+<p class=" topic border-danger"> <span class="text-danger"> Topic: </span> ${card.topic} </p>
+</div>
+   </article>`)
+
+  })
+
+  speakersContainer.innerHTML = speakerCards.join("")
 
 })
