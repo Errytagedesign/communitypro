@@ -363,13 +363,71 @@ hr {
   background: #303238;
   color: var(--light-grey);
   padding: 1em;
-  margin: 1em;
+  margin: 0.3em;
   font-size: 2rem;
   border-radius: 12px;
 }
 
 /* ====== SPEAKER SECTION END ==== */
 
-.about .active {
+.active {
   color: #f00;
+}
+
+.aboutHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    var(--black) url("../images/aboutBg.avif") no-repeat center
+    center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 7em 0;
+}
+
+.aboutHero h1 {
+  color: var(--primary-color);
+}
+
+.aboutHero-contents p {
+  background: #fff;
+  padding: 1em 2em;
+  color: var(--black);
+}
+
+@media screen and (min-width: 768px) {
+  .aboutHero {
+    flex-direction: column;
+    background:
+      var(--black) url("../images/heroBg.jpeg") no-repeat center
+      right;
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 7em 2em;
+  }
+
+  .aboutHero h1 {
+    font-size: 5rem;
+  }
+}
+
+.logoSection {
+  color: var(--black);
+  padding: 7em 2em;
+}
+
+.pastEvent {
+  color: var(--black);
+  padding: 7em 2em;
+}
+
+.pastEvent article img {
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .pastEvent article img {
+    width: 49%;
+  }
 }
