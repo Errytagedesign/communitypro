@@ -1,10 +1,10 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="codeeq.jpg" alt="logo" width="140"  height="auto" />
+  <img src="/assets/images/communitypro-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Hellow Microverse Project</b></h3>
+  <h3><b>Community Pro Tech Meets Events Project</b></h3>
 
 </div>
 
@@ -31,12 +31,13 @@
 
 # 📖 Hello Microverse Project <a name="about-project"></a>
 
-A Microverse Perosnal Portfolio Project developed with duo of HTML and CSS. In addition, i added Linters for Html and Css.
+A Tech events Project developed with the best combo of HTML,CSS and JAVASCRIPT. In addition, i added Linters for Html,Css and Javascript.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 1-HTML
 2-CSS
+3-JS
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -45,6 +46,7 @@ A Microverse Perosnal Portfolio Project developed with duo of HTML and CSS. In a
   <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS</a></li>
   </ul>
 </details>
 
@@ -53,13 +55,14 @@ A Microverse Perosnal Portfolio Project developed with duo of HTML and CSS. In a
 ### Key Features <a name="key-features"></a>
 
 - Add index.html file.
+- Add about.html file.
 - Add style.css file.
+- Add index.js file.
 - Add Linters.
 - Add Header to the index.html file.
 - Add Hero section to the index.html file.
 - Add global styling variables to style.html file.
-- Add Work section to the index.html file.
-- Add About me section to the index.html file.
+- Add Programs section to the index.html file.
 - Add more styles to the styles.css file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -68,8 +71,7 @@ A Microverse Perosnal Portfolio Project developed with duo of HTML and CSS. In a
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<a href="https://codeeq-microverse-portfolio.netlify.app/">Live Demo Link</a>
-<a href="https://errytagedesign.github.io/microverse-portfolio/">Live Demo Link</a>
+<a href="https://communitypro-meets.netlify.app/">Live Demo Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,11 +152,7 @@ I have added the linters or tests in order to avoid anykind of typos and ensure 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Add Tech Stacks
-- [ ] Add Qoutes
-- [ ] Add Contact Form
-- [ ] Add Footer
-- [ ] Add more Styling
+- [ ] Add More Speakers
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
