@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const programCards = programs.map(
     (
-      card
+      card,
     ) => `<article class='d-flex flex-row flex-md-column align-items-center justify-content-between mx-1 p-3 Cards'>
 
       <i class='${card.icon}'></i>
@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
       <h3 class='my-3'>${card.title} </h3>
 
       <p class='col-6 text-start text-md-center col-md-12'>${card.description} </p>
-      </article>`
+      </article>`,
   );
 
   programsContainer.innerHTML = programCards.join('');
@@ -129,7 +129,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const speakerCards = Speakers.map(
     (
-      card
+      card,
     ) => `<article class="d-flex flex-row justify-content-between mx-1 p-3 speakerCard col-12 col-md-5">
     <figure class="col-4">
     <img class='col-12 speakerImg' src='${card.imageUrl}' alt='communitypro tech meets speakers' >
@@ -140,7 +140,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <hr class="col-2">
     <p class='topic border-danger'>  ${card.topic} </p>
     </div>
-   </article>`
+   </article>`,
   );
 
   speakersContainer.innerHTML = speakerCards.join('');
