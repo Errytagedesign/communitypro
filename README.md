@@ -72,6 +72,7 @@ A Tech events Project developed with the best combo of HTML,CSS and JAVASCRIPT. 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 <a href="https://communitypro-meets.netlify.app/">Live Demo Link</a>
+<a href="https://errytagedesign.github.io/communitypro/">Live Demo Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
