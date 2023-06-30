@@ -111,7 +111,12 @@ button:hover {
 /* ====== HEADER START ==== */
 
 header {
-  background: var(--primary-color);
+  background: var(--white);
+}
+
+.topNav {
+  background: var(--black);
+  width: 100%;
 }
 
 nav {

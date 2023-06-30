@@ -72,6 +72,7 @@ A Tech events Project developed with the best combo of HTML,CSS and JAVASCRIPT. 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 <a href="https://communitypro-meets.netlify.app/">Live Demo Link</a>
+<a href="https://errytagedesign.github.io/communitypro/">Live Demo Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,6 +180,9 @@ If you like this project just give it a star -
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse.
+
+- This project was based on the design by [Cindy Shin](https://www.behance.net/adagio07) in [Behance](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015).
+- The design is licensed under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
