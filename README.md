@@ -180,6 +180,9 @@ If you like this project just give it a star -
 
 I would like to thank Microverse.
 
+- This project was based on the design by [Cindy Shin](https://www.behance.net/adagio07) in [Behance](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015).
+- The design is licensed under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
